@@ -1,0 +1,39 @@
+
+
+<form [formGroup]="myGroup">
+    <div>
+        <label for="file">ChartName</label>
+        <input formControlName="chartname" type="text" placeholder="ChartName" required>
+    </div>
+
+
+  <div>
+    <label for="file">Upload File:</label>
+    <input type="file" id="file" (change)="onFileSelected($event)" accept=".xlsx" required>
+  </div>
+  <br>
+  <button type="submit" (click)="onSubmit()">Submit</button>
+</form>
+
+<!-- <br><br><br><br><br><br><br><br>
+<div style ="width: 50%; margin-left:20%">
+<h3 style  ="text-align:center;">Excel Data in HTML Table</h3>
+<table class= "table-table-strped">
+<thead>
+<tr>
+  <th scope ="col">Timestamp</th>
+  <th scope ="col">ProcessDataMemory</th>
+  <th scope ="col">HeapDataMemory</th>
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of ExcelData">
+    <th scope="row">{{data.Timestamp}}</th>
+    <td> {{data.ProcessDataMemory}}</td>
+    <td>{{data.HeapDataMemory}}</td>
+
+  </tr>
+</tbody>
+</table>
+</div> -->
+

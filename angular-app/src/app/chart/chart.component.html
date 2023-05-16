@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table table-trapped">
+
+        <thead>
+            <tr>
+                <th>ChartName</th>
+                <th>TimeStamp</th>
+                <th>TimeZone</th>
+                <th>ShowChart</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of mydata">
+                <td>{{ user.chartName }}</td>
+              <td>{{ user.timeStamp }}</td>
+              <td>{{ user.timezone }}</td>
+              <td><button class="btn btn-primary" (click)="plotChart(user.fileColumns)">Show Chart</button>
+              </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div id="chartModal" class="modal">
+    <div class="modal-content">
+      <canvas id="chartCanvas"></canvas>
+    </div>
+  </div>
